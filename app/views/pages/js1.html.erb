@@ -1,0 +1,36 @@
+<div class="background page-container">
+  <div class="drum-set">
+    <div data-key="70" class="drum-element" >
+      boom (F)
+    </div>
+  <div data-key="74" class="drum-element" >
+      clap (J)
+    </div>
+  <div data-key="73" class="drum-element" >
+      hihat (I)
+    </div>
+  </div>
+</div>
+
+<audio data-key="70" src="../assets/boom.wav"></audio>
+<audio data-key="74" src="../assets/clap.wav"></audio>
+<audio data-key="73" src="../assets/hihat.wav"></audio>
+
+<script>
+const printAudio = (e) => {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  if (!audio) {
+    return;
+  };
+  audio.currentTime = 0;
+  audio.play();
+  document.querySelector(`div[data-key="${e.keyCode}"]`).class = "drum-element-active";
+  const key = document.querySelector(`.drum-element[data-key="${e.keyCode}"]`);
+  key.classList.add("drum-element-active");
+  console.log(key);
+  // await sleep(0.1);
+  // document.querySelector(`audio[data-key="${e.keyCode}"]`).classList.remove("drum-element-active");
+};
+window.addEventListener('keydown', e => printAudio(e));
+
+</script>
