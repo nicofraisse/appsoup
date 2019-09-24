@@ -1,33 +1,66 @@
-<div class="background page-container">
-  <div class="drum-set">
-    <div data-key="70" class="drum-element" >
-      boom (F)
+<div class="page-container">
+  <div class="drum-set-container">
+    <div class="drum-row">
+      <div data-key="68" class="drum-element" >
+        <div>CLAP<br>(D)</div>
+      </div>
+      <div data-key="70" class="drum-element" >
+        SNARE<br>(F)
+      </div>
+      <div data-key="74" class="drum-element" >
+        HIT HAT<br>(J)
+      </div>
     </div>
-  <div data-key="74" class="drum-element" >
-      clap (J)
-    </div>
-  <div data-key="73" class="drum-element" >
-      hihat (I)
+    <div class="drum-row">
+      <div data-key="67" class="drum-element" >
+        KICK<br>(C)
+      </div>
+      <div data-key="66" class="drum-element" >
+        TOM<br>(B)
+      </div>
+      <div data-key="78" class="drum-element" >
+        TINK<br>(N)
+      </div>
     </div>
   </div>
 </div>
 
-<audio data-key="70" src="../assets/boom.wav"></audio>
-<audio data-key="74" src="../assets/clap.wav"></audio>
-<audio data-key="73" src="../assets/hihat.wav"></audio>
+<audio data-key="67" src="../assets/kick.wav"></audio>
+<audio data-key="68" src="../assets/clap.wav"></audio>
+<audio data-key="74" src="../assets/hihat.wav"></audio>
+<audio data-key="70" src="../assets/snare.wav"></audio>
+<audio data-key="78" src="../assets/tink.wav"></audio>
+<audio data-key="66" src="../assets/tom.wav"></audio>
 
 <script>
-const printAudio = (e) => {
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  if (!audio) {
-    return;
-  };
+
+  function removeClass(e) {
+    if(e.propertyName !== 'transform') {return;};
+    console.log(this);
+    this.classList.remove("drum-element-active")
+  }
+  const printAudio = (e) => {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    if (!audio) {
+      return;
+    };
+
   audio.currentTime = 0;
   audio.play();
+
+
+
   document.querySelector(`div[data-key="${e.keyCode}"]`).class = "drum-element-active";
   const key = document.querySelector(`.drum-element[data-key="${e.keyCode}"]`);
-  key.classList.add("drum-element-active");
-  console.log(key);
+  key.classList.add("drum-element-active")
+;
+  const keys = document.querySelectorAll(".drum-element");
+
+  keys.forEach(drumEl => {
+    drumEl.addEventListener('transitionend', removeClass);
+  });
+
+  console.log(keys);
   // await sleep(0.1);
   // document.querySelector(`audio[data-key="${e.keyCode}"]`).classList.remove("drum-element-active");
 };
