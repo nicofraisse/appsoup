@@ -1,0 +1,59 @@
+.clockpagecontainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(100, 140, 190, 0.3);
+}
+
+.clocks-container {
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+
+.clock {
+  border: 16px solid grey;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+.aiguille {
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  transition: all 0.1s;
+  transition-timing-function: cubic-bezier(0.4, 2.2, 0.7, 1)
+}
+
+#aiguille-seconds {
+  background-color: red;
+  width: 120px;
+
+}
+#aiguille-minutes {
+  background-color: green;
+  width: 120px;
+}
+#aiguille-hours {
+  background-color: blue;
+  width: 96px;
+}
+
+
