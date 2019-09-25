@@ -4,8 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: rgba(100, 140, 190, 0.3);
+  background-image: linear-gradient(30deg, rgba(46,64,87,.7), #2E4057);
 }
 
 .clocks-container {
@@ -24,11 +23,13 @@
 
 
 .clock {
-  border: 16px solid grey;
+  border: 16px solid #F1DABF;
+  background-color: rgba(218,65,103,1);
   border-radius: 50%;
   height: 300px;
   width: 300px;
   position: relative;
+  transition: 1s linear;
 }
 .aiguille {
   height: 8px;
@@ -38,22 +39,32 @@
   right: 50%;
   transform: rotate(90deg);
   transform-origin: 100%;
-  transition: all 0.1s;
-  transition-timing-function: cubic-bezier(0.4, 2.2, 0.7, 1)
 }
 
 #aiguille-seconds {
-  background-color: red;
+  background-color: #F1DABF;
   width: 120px;
 
 }
 #aiguille-minutes {
-  background-color: green;
+  background-color: #083D77;
   width: 120px;
 }
 #aiguille-hours {
-  background-color: blue;
+  background-color: #F4D35E;
   width: 96px;
+}
+
+#junction {
+  width: 12px;
+  height: 12px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 49.5%;
+  right: 47.5%;
+  z-index: 20;
+  transform-origin: 50% 50% 0;
 }
 
 
