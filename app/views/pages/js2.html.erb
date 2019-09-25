@@ -4,9 +4,11 @@
       <div class="aiguille" id="aiguille-seconds"></div>
       <div class="aiguille" id="aiguille-minutes"></div>
       <div class="aiguille" id="aiguille-hours"></div>
+
+      <div id="junction"></div>
     </div>
 
-    <div class="time">
+    <div class="time" style="display: none;">
     </div>
 
   </div>
@@ -18,10 +20,46 @@
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
     const hours = now.getHours();
+    const clock = document.querySelector(".clock");
+    const aiguille = document.querySelector(".aiguille");
     const aiguilleSeconds = document.getElementById("aiguille-seconds");
     const aiguilleMinutes = document.getElementById("aiguille-minutes");
     const aiguilleHours = document.getElementById("aiguille-hours");
-    aiguilleSeconds.style.transform = `rotate(${seconds*6+90}deg)`;
+
+
+
+    if (seconds > 0) {
+      aiguilleSeconds.style.transform = `rotate(${seconds*6+90}deg)`;
+      aiguilleSeconds.style.transition = "0.1s";
+      aiguilleSeconds.style.transitionTimingFunction = "cubic-bezier(0.4, 2.2, 0.7, 1)";
+    } else {
+      aiguilleSeconds.style.transition = "none";
+      aiguilleSeconds.style.transform = `rotate(${seconds*6+90}deg)`;
+    };
+
+    if (minutes > 0) {
+      aiguilleMinutes.style.transform = `rotate(${seconds*6+90}deg)`;
+      aiguilleMinutes.style.transition = "0.1s";
+      aiguilleMinutes.style.transitionTimingFunction = "cubic-bezier(0.4, 2.2, 0.7, 1)";
+    } else {
+      aiguilleMinutes.style.transition = "none";
+      aiguilleMinutes.style.transform = `rotate(${seconds*6+90}deg)`;
+    }
+
+    if (hours > 0) {
+      aiguilleHours.style.transform = `rotate(${seconds*6+90}deg)`;
+      aiguilleHours.style.transition = "0.1s";
+      aiguilleHours.style.transitionTimingFunction = "cubic-bezier(0.4, 2.2, 0.7, 1)";
+    } else {
+      aiguilleHours.style.transition = "none";
+      aiguilleHours.style.transform = `rotate(${seconds*6+90}deg)`;
+    }
+
+    const shadowSecondsA = 80 * Math.cos((seconds/60)*2*Math.PI+(Math.PI/2));
+    const shadowSecondsB = 200 * Math.sin(-(seconds/60)*2*Math.PI +(Math.PI/2));
+    clock.style.boxShadow = `${shadowSecondsA}px ${shadowSecondsB}px 0px black`
+
+
     aiguilleMinutes.style.transform = `rotate(${minutes*6+90}deg)`;
     aiguilleHours.style.transform = `rotate(${(hours*360)/12-270}deg)`;
 
