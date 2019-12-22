@@ -26,8 +26,6 @@
     const aiguilleMinutes = document.getElementById("aiguille-minutes");
     const aiguilleHours = document.getElementById("aiguille-hours");
 
-
-
     if (seconds > 0) {
       aiguilleSeconds.style.transform = `rotate(${seconds*6+90}deg)`;
       aiguilleSeconds.style.transition = "0.1s";
@@ -55,9 +53,9 @@
       aiguilleHours.style.transform = `rotate(${seconds*6+90}deg)`;
     }
 
-    const shadowSecondsA = 80 * Math.cos((seconds/60)*2*Math.PI+(Math.PI/2));
-    const shadowSecondsB = 200 * Math.sin(-(seconds/60)*2*Math.PI +(Math.PI/2));
-    clock.style.boxShadow = `${shadowSecondsA}px ${shadowSecondsB}px 0px black`
+    const shadowSecondsA = 50 * Math.cos((seconds/60)*2*Math.PI+(Math.PI/2));
+    const shadowSecondsB = 50 * Math.sin(-(seconds/60)*2*Math.PI +(Math.PI/2));
+    clock.style.boxShadow = `${shadowSecondsA}px ${shadowSecondsB}px 1px black`
 
 
     aiguilleMinutes.style.transform = `rotate(${minutes*6+90}deg)`;
