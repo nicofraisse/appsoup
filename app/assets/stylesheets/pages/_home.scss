@@ -3,7 +3,7 @@ html {
   overflow: hidden;
 }
 
-body {
+.homebody {
   perspective: 1px;
   height: 100vh;
   transform-style: preserve-3d;
@@ -42,7 +42,7 @@ body {
 .app {
   width: 100%;
   min-width: 320px;
-  max-width: 800px;
+  max-width: 640px;
 }
 .header-container {
   display: flex;
@@ -66,6 +66,10 @@ body {
 .separator-large {
   height: 32px;
 }
+.center-image img{
+  display:block;
+  margin:auto;
+}
 
 h1 {
   font-family: 'Dancing Script', cursive;
@@ -82,14 +86,39 @@ font-size: 32px;
 }
 
 
-
 p {
-  // font-family: 'Source Code Pro', monospace;
-  // font-family: 'Roboto Mono', monospace;
+  text-align: justify;
   font-family: 'Inconsolata', monospace;
-  // font-family: 'PT Mono', monospace;
-  // font-family: 'Courier Prime', monospace;
   font-size: 16px;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.app-card {
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 5px;
+  display: flex;
+  &:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
+
+.js30-img {
+  border-radius: 5px 0px 0px 5px;
+  height:80px;
+  width:100px;
+  background-size: cover;
+  background-position: center;
+}
+#js30-img-1 {
+  background-image: url(js1.jpg);
+}
+#js30-img-2 {
+  background-image: url(js2.jpg);
+}
 

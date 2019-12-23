@@ -1,56 +1,101 @@
-<div class='parallax'>
-</div>
-<div class="app-wrapper">
-  <div class="app">
-    <div class="header-container">
-      <div>
-        <%= image_tag('soup.png', size:"80") %>
-      </div>
-      <div style="width: 16px;"></div>
-      <div class="title-container">
-        <div class="title">
-          <h1>App Soup!</h1>
+<div class="homebody">
+  <div class='parallax'>
+  </div>
+  <div class="app-wrapper">
+    <div class="app">
+      <div class="header-container">
+        <div>
+          <%= image_tag('soup.png', size:"80") %>
+        </div>
+        <div style="width: 16px;"></div>
+        <div class="title-container">
+          <div class="title">
+            <h1>App Soup!</h1>
+          </div>
         </div>
       </div>
+
+      <div class="separator-large"></div>
+      <div class="separator-large"></div>
+
+      <p>Welcome to Nicolas Fraisse's app soup. Here you will find an archive of web-applications built by Nicolas Fraisse, followed by the souce code. <br> Jump to: Javascript | Python | Ruby On Rails</p>
+      <a href="https://www.linkedin.com/in/nicolasfraisse/" target="_blank">LinkedIn</a><br>
+      <a href="https://github.com/nicofraisse" target="_blank">GitHub</a>
+
+
+      <div class="separator-large"></div>
+      <div class="center-image">
+        <%= image_tag('js.png', size:"96", title:'JavaScript')%>
+      </div>
+      <div class="separator-large"></div>
+
+
+      <h2>~ JavaScript 30 ~</h2>
+      <p>30 days of simpla Vanilla JavaScript ES6. 1 Project per day. Goal: Develop and maintain JS Fundamental skills</p>
+
+      <div class="app-card">
+        <div id="js30-img-1" class="js30-img">
+        </div>
+        <div class="js30-text" >
+          <%= link_to("1 - Drum set", js_1_path) %>
+        </div>
+      </div>
+      <div class="separator-small"></div>
+
+      <div class="app-card">
+        <div id="js30-img-2" class="js30-img"">
+        </div>
+        <div class="js30-text">
+          <%= link_to("2 - Simple clock", js_2_path) %>
+        </div>
+      </div>
+
+      <br>
+      <%= link_to("notes", notes_path) %>
+
+      <div class="separator-large"></div>
+
+
+
+
+      <div class="separator-large"></div>
+      <div class="center-image">
+        <%= image_tag('python.png', size:"96", title:'Python')%>
+      </div>
+      <div class="separator-large"></div>
+
+          <h2>~ Airbnb in NYC ~</h2>
+
+      <div class="separator-large"></div>
+
+      <div class="center-image">
+        <%= image_tag('rails.png', size:"96", title:'Rails')%>
+      </div>
+      <div class="separator-large"></div>
+
+
+      <h2>~ BandWizard ~</h2>
+      <a href="http://bandwizard.co" target="_blank">Band Wizard</a>
+
+
+      <h2>~ Rent My Life ~<h2>
+     <a href="https://rentmylife-lmssr.herokuapp.com/" target="_blank">Rent My Life</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     </div>
-
-    <div class="separator-large"></div>
-    <div class="separator-large"></div>
-
-    <p>Welcome to Nicolas Fraisse's app soup. Here you will find an archive of web-apps, easter eggs, and back-end and front-end projects made by Nicolas Fraisse, followed by the souce code. <br> Jump to: Javascript | Python | Ruby On Rails</p>
-
-    <div class="separator-large"></div>
-
-
-
-    <div class="app-card"></div>
-
-
-
-    <h2>~ JavaScript 30 ~</h2>
-    <p>30 days of simpla Vanilla JavaScript ES6. 1 Project per day. Goal: Develop and maintain JS Fundamental skills</p>
-
-    <%= link_to("1 - Drum set", js_1_path) %>
-    <br>
-    <%= link_to("2 - Simple clock", js_2_path) %>
-    <%= link_to("notes", notes_path) %>
-    <div class="separator-large"></div>
-
-
-
-
-
-
-
-
-    <h2>~ Webapps ~</h2>
-    <a href="https://rentmylife-lmssr.herokuapp.com/" target="_blank">Rent My Life</a>
-    <a href="http://bandwizard.co" target="_blank">Band Wizard</a>
-
-    <br>
-    <a href="https://www.linkedin.com/in/nicolasfraisse/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/nicofraisse" target="_blank">GitHub</a>
-
   </div>
 </div>
+
 
