@@ -15,14 +15,13 @@
         </div>
       </div>
 
-      <div class="separator-large"></div>
-      <div class="separator-large"></div>
 
-      <p>Welcome to Nicolas Fraisse's app soup. Here you will find an archive of web-applications built by Nicolas Fraisse, followed by the souce code. <br> Jump to: Javascript | Python | Ruby On Rails</p>
+      <p>Welcome to Nicolas Fraisse's app soup. Here you will find an archive of web-applications built or majorly contributed by Nicolas Fraisse, followed by the souce code. <br> Jump to: <a href="#javascript">Javascript</a> | <a href="#python">Python</a> | <a href="#rubyonrails">Ruby On Rails</a> |
+        <%= link_to('blog', blog_path) %></p>
       <a href="https://www.linkedin.com/in/nicolasfraisse/" target="_blank">LinkedIn</a><br>
       <a href="https://github.com/nicofraisse" target="_blank">GitHub</a>
 
-
+      <a name="javascript"></a>
       <div class="separator-large"></div>
       <div class="center-image">
         <%= image_tag('js.png', size:"96", title:'JavaScript')%>
@@ -33,22 +32,12 @@
       <h2>~ JavaScript 30 ~</h2>
       <p>30 days of simpla Vanilla JavaScript ES6. 1 Project per day. Goal: Develop and maintain JS Fundamental skills</p>
 
-      <div class="app-card">
-        <div id="js30-img-1" class="js30-img">
-        </div>
-        <div class="js30-text" >
-          <%= link_to("1 - Drum set", js_1_path) %>
-        </div>
-      </div>
-      <div class="separator-small"></div>
+      <div class="js30-container">
+        <p><%= link_to("1 - Drum set", js_1_path) %></p>
 
-      <div class="app-card">
-        <div id="js30-img-2" class="js30-img"">
-        </div>
-        <div class="js30-text">
-          <%= link_to("2 - Simple clock", js_2_path) %>
-        </div>
+        <p><%= link_to("2 - Simple clock",js_2_path) %></p>
       </div>
+
 
       <br>
       <%= link_to("notes", notes_path) %>
@@ -57,29 +46,37 @@
 
 
 
-
+      <a name="python"></a>
       <div class="separator-large"></div>
       <div class="center-image">
         <%= image_tag('python.png', size:"96", title:'Python')%>
       </div>
       <div class="separator-large"></div>
 
-          <h2>~ Airbnb in NYC ~</h2>
+      <h2>~ Airbnb in NYC ~</h2>
 
       <div class="separator-large"></div>
+      <div class="separator-large"></div>
+      <div class="separator-large"></div>
 
+      <a name="rubyonrails"></a>
+      <div class="separator-large"></div>
       <div class="center-image">
         <%= image_tag('rails.png', size:"96", title:'Rails')%>
       </div>
       <div class="separator-large"></div>
+      <div class="separator-large"></div>
 
 
       <h2>~ BandWizard ~</h2>
-      <a href="http://bandwizard.co" target="_blank">Band Wizard</a>
+      <p>Are you a band looking for a musician or a musician looking for a band? BandWizard got you covered! This app matches musicians and bands according to instruments, style, and years of exerience! <a href="http://bandwizard.co" target="_blank">Band Wizard</a> </p>
+      <iframe width="100%" height="340px;" src="https://www.youtube.com/embed/gxGbLhHBCto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+      <div class="separator-small"></div>
       <h2>~ Rent My Life ~<h2>
-     <a href="https://rentmylife-lmssr.herokuapp.com/" target="_blank">Rent My Life</a>
+        <p>Does your life suck? Rent a new one & become someone else! <a href="https://rentmylife-lmssr.herokuapp.com/" target="_blank">Rent My Life</a></p>
+    <div style="height: 30px; width: 30px; background-color: grey; cursor: pointer"class="destroyer"></div>
+
 
     <br>
     <br>
@@ -97,5 +94,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  square = document.querySelector(".destroyer")
+  toDestroy = document.querySelector(".app-wrapper")
+  square.addEventListener('click', () => toDestroy.setAttribute("style", "display: none;"))
+</script>
 
 

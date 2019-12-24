@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'js', to: 'pages#js'
   get 'js/1', to: 'pages#js1'
   get 'js/2', to: 'pages#js2'
+  get 'js/3', to: 'pages#js3'
+  get 'blog', to: 'pages#blog'
 
 end

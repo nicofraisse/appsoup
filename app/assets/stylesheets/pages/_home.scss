@@ -82,7 +82,8 @@ h2 {
 font-family: 'Noto Sans', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 font-size: 32px;
-
+margin-top: 24px;
+margin-bottom:16px;
 }
 
 
@@ -97,28 +98,7 @@ p {
   bottom: 0;
 }
 
-
-.app-card {
-  background-color: rgba(255,255,255,0.75);
-  border-radius: 5px;
-  display: flex;
-  &:hover {
-    background-color: rgba(255,255,255,0.9);
-  }
-}
-
-
-.js30-img {
-  border-radius: 5px 0px 0px 5px;
-  height:80px;
-  width:100px;
-  background-size: cover;
-  background-position: center;
-}
-#js30-img-1 {
-  background-image: url(js1.jpg);
-}
-#js30-img-2 {
-  background-image: url(js2.jpg);
+.js30-container {
+  text-align: center;
 }
 
